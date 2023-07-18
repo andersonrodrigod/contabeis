@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    background-image: url('../img/img-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.messages {
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: auto;
+}
+
+.messages span {
+    background-color: rgb(47, 42, 59);
+    padding: 10px 10px 10px 10px;
+
+}
+
+#navbar a img {
+    height: 75px;
+    width: 67px;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#navbar ul {
+    display: flex;
+    
+}
+
+#navbar ul li {
+    margin-right: 20px;
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    list-style: none;
+}
+
+.container {
+    margin-top: 50px;
+
+}
+
+.home-page {
+    text-align: center;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-acording {
+    margin-top: 100px;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 370px;
+    background-color: white;  
+    padding-bottom: 50px;
+}
+
+.auth-acording h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.container-acording {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.container-acording div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container-acording div label {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.container-acording div input {
+    height: 30px;
+    margin-top: 3px;
+    border-radius: 3px;
+    font-size: 1.1em;
+    background-color: rgb(47, 42, 59);
+    background-clip: content-box;
+    caret-color: rgb(47, 42, 59);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-cadastrar {
+    font-family: 'Lato', sans-serif;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 270px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.btn-cadastrar:hover {
+    background-color: rgb(47, 42, 59);
+    color: white;
+}
+
+.auth-acording p {
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-entrar {
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 270px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.btn-entrar:hover {
+    background-color: rgb(47, 42, 59);
+    color: white;
+}
+
+.home-container {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container header  {
+    background-color: white;
+    margin-top: 30px;
+    font-size: 1.4em;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 50px;
+}
+
+.home-container header h1 {
+    color: purple;
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-right: 100px;
+}
+
+.home-container header p {
+    font-size: 1em;
+    margin-top: 40px;
+    margin-left: 90px;
+    margin-right: 100px;
+    line-height: 1.5em;
+}
+
+.home-container main section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 70px;
+}
+
+.registro-de-empresas {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-right: 100px;
+    background-color: white;
+}
+
+.home-title-section {
+    margin-top: 20px;
+    margin-left: 90px;
+}
+
+.home-title-section h1 {
+    margin-top: 20px;
+    color: purple;
+    font-size: 2.2em;
+}
+
+.article-acording-1 {
+    display: flex;
+    gap: 30px;
+    margin-left: 90px;
+}
+
+.article-acording-1 article {
+    border: 1px solid rgb(249, 83, 249);
+    border-radius: 5px;
+    background-color: rgb(248, 205, 242);
+    margin-top: 50px;
+    width: 275px;
+    padding-bottom: 20px;
+}
+
+.article-acording-1 article h2 {
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+.article-acording-1 article p {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 1.1em;
+    line-height: 1.9em;
+}
+
+.registro-de-ativos {
+    background-color: white;
+    margin-right: 100px;
+}
+
+.article-acording-2 {
+    display: flex;
+    margin-top: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.335);
+    margin-left: 90px;
+    margin-right: 80px;
+    
+}
+
+.article-acording-2 article {
+    border: 1px solid rgba(0, 0, 0, 0.239);
+    width: 300px;
+    padding-bottom: 20px;
+}
+
+.article-acording-2 article h2 {
+    color: rgba(243, 29, 243, 0.663);
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.article-acording-2 article ul {
+    margin-top: 20px;
+    margin-left: 33px;
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.article-acording-2 article ul li {
+    margin-top: 20px;
+}
+
+.entradas-contabeis {
+    background-color: white;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.entradas-contabeis h1 {
+    margin-top: 50px;
+    margin-left: 80px;
+    text-align: start;
+    font-size: 2.2em;
+    color: purple;
+}
+
+.entradas-contabeis h2 {
+    margin-top: 50px;
+    font-size: 1.6em;
+    color: rgba(243, 29, 243, 0.663);
+}
+
+.entradas-contabeis p {
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 1.2em;
+}
+
+.entradas-contabeis img {
+    margin-top: 40px;
+    max-width: 900px;
+}
+
+.relatório-financeiro {
+    background-color: white;
+    margin-top: 100px;
+}
+
+.relatório-financeiro h1 {
+    margin-top: 50px;
+    margin-left: 80px;
+    color: purple;
+    font-size: 2.2em;
+}
+
+.relatório-financeiro-acroding {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.296);
+}
+
+.relatório-financeiro-acroding article {
+    border: 1px solid rgba(0, 0, 0, 0.296);
+    width: 300px;
+    padding-bottom: 20px;
+}
+
+.relatório-financeiro-acroding article h2 {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 50px;
+    color: black;
+
+}
+
+.relatório-financeiro-acroding article p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    line-height: 1.5em;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid white;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding-bottom: 25px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.btns-painel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.btn-create {
+    margin-top: 20px;
+    
+}
+
+.dashboard a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 15px 10px 15px;
+    background-color: rgba(0, 0, 1, 0.682);
+    font-family: 'Lato', sans-serif;
+}
+
+.dashboard a:hover {
+    background-color: rgba(9, 95, 217, 0.254);
+    color: black;
+}
+
+.empresa-form-container {
+    background-color: white;
+    margin-left: 350px;
+    margin-right: 350px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 50px;
+}
+
+
+.btn-back {
+    margin-left: 15px;
+    margin-top: 30px; 
+}
+
+.btn-back a {
+    background-color: rgba(0, 0, 1, 0.682);
+    color: white;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 7px 15px 7px 15px;
+    border-radius: 7px;
+}
+
+.btn-back a:hover {
+    background-color: rgba(9, 95, 217, 0.254);
+    color: black;
+}
+
+.empresa-form-container h1 {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.empresa-form-container form {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 15px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-control label {
+    text-align: start;
+    font-size: 1.3em;
+}
+
+.form-control input {
+    margin-top: 4px;
+    height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+}
+
+.btn-adicionar {
+    width: 280px;
+    height: 30px;
+    margin-top: 3px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.companies-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-left: 450px;
+    margin-right: 450px;
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 50px;
+}
+
+
+.companies-added h2 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 2em;
+}
+
+.companies-added ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid rgba(0, 0, 0, 0.361);
+}
+
+.companies-added ul li {
+    text-align: center;
+    list-style: none;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.476);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-color: black;
+}
+
+.footer-acording {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    
+}
+
+.footer-acording section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-acording section a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+}
+
+.rodape {
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}

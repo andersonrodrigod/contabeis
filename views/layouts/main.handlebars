@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabeis</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="/">
+            <img src="/img/logo.jpg" alt="logo">
+        </a>
+        <ul>
+            {{#if session.userid}}
+                <li><a href="/companies/all">Empresas</a></li>
+                <li><a href="/companies/dashboard">Painel</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
+                <li><a href="/login">Entrar</a></li>
+                <li><a href="/register">Registrar</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+    <div class="container">
+        {{#if messages.message}}
+            <div class="messages">
+                <span>{{messages.message}}</span>
+            </div>
+        {{/if}}
+        {{{body}}}
+    </div>
+</body>
+</html>
