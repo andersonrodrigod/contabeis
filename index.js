@@ -3,6 +3,13 @@ const exphbs = require('express-handlebars')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 const flash = require('express-flash')
+const handlebarsHelpers = require('handlebars-helpers')()
+const handlebars = require('handlebars')
+
+Object.keys(handlebarsHelpers).forEach(helperName => {
+    handlebars.registerHelper(helperName, handlebarsHelpers[helperName]);
+});
+
 
 const app = express()
 
@@ -14,13 +21,16 @@ const User = require('./models/User')
 
 
 
+
 const companiesRoutes = require('./routes/companies')
 const authRoutes = require('./routes/authRoutes')
 const homePage = require('./routes/homePage')
+const releasesroutes = require('./routes/releases')
 
 
 //const CompanyController = require('./controller/CompanyController')
 const CompanyController = require('./controller/CompanyController')
+
 
 app.engine('handlebars', exphbs.engine())
 app.set("view engine", "handlebars")
@@ -60,12 +70,13 @@ app.use((req, res, next,) => {
     if (req.session.userid) {
         res.locals.session = req.session
     } 
-
+    
     next()
 })
 
 app.use('/companies', companiesRoutes)
 app.use('/', authRoutes)
+app.use('/releases', releasesroutes)
 
 app.get('/', homePage)
 

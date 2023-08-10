@@ -1,0 +1,24 @@
+<div class="company-container">
+    <div class="company-acording">
+        <div class="btn-back">
+            <a href="/companies/all">Voltar</a>
+        </div>
+        <div class="company-title">
+            <h1>{{company.title}}</h1>
+        </div>
+        <div class="company-links">
+            <div>
+                <a href="/releases/addreleases/{{company.id}}">Adicionar Lançamentos</a>
+            </div>
+            <div>
+                <a href="/releases/allreleases/{{company.id}}">Todos os lançamentos</a>
+            </div>
+            <div>
+                <a href="/companies/edit/{{company.id}}">Editar Empresa</a>
+            </div>
+            <div>
+                <a href="/companies/remove/{{company.id}}">Deletar Empresa</a>
+            </div>
+        </div>
+    </div>
+</div>

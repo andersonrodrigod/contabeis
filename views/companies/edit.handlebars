@@ -1,0 +1,14 @@
+<div class="empresa-form-container">
+    <div class="btn-back">
+        <a href="/companies/company/{{company.id}}">Voltar</a>
+    </div>
+    <h1>Adicionar Empresas</h1>
+    <form action="/companies/edit/{{company.id}}" method="post">
+    <input type="hidden" name="id" value="{{company.id}}">
+        <div class="form-control">
+            <label for="title">Empresa</label>
+            <input type="text" name="title" value="{{company.title}}" placeholder="Digite o nome da empresa" required>
+        </div>
+        <input type="submit" value="Editar Empresa" class="btn-adicionar">
+    </form>
+</div>

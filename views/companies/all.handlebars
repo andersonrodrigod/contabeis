@@ -3,7 +3,9 @@
         <h2>Empresas Adicionadas</h2>
         <ul>
             {{#each companies}}
-                <li>{{this.title}}</li>
+                <li>
+                    <a href="/companies/company/{{this.id}}">{{this.title}}</a>
+                </li>
             {{/each}}
         </ul>
     </div>

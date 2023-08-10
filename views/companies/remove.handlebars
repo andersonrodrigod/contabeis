@@ -1,0 +1,18 @@
+<div class="remove-company">
+    <div class="remove-acording">
+        <div class="btn-back remove-btn-back">
+            <a href="/companies/company/{{company.id}}">Voltar</a>
+        </div>
+        <div class="remove-title">
+            <h1>{{company.title}}</h1>
+        </div>
+        <div class="remove-info">
+            <span>Ao clicar em "Deletar Empresa" todas os lançamentos adicionados a ela também serão deletados. Tem certeza que deseja deletar
+            </span>
+        </div>
+        <form action="/companies/remove/{{company.id}}" method="post">
+            <input type="hidden" name="id" value="{{company.id}}">
+            <input type="submit" value="Deletar Empresa" class="btn-adicionar">
+        </form>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="all-releases-container">
+    <div class="releases-info">
+        <div class="btn-back">
+            <input type="hidden" name="CompanyId" value="{{id}}">
+            <a href="/companies/company/{{id}}">Voltar</a>
+        </div>
+        <div class="company-title">
+            <h1>Lançamentos de {{companyName.title}}</h1>
+        </div>
+        <div class="info-acording">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="date">Data</th>
+                        <th class="history">Histórico</th>
+                        <th class="debito">Débito</th>
+                        <th class="credito">Crédito</th>
+                        <th class="valor">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each releases}}
+                    <tr>
+                        <td class="date">{{this.date}}</td>
+                        <td class="history">{{this.description}}</td>
+                        <td class="debito">{{this.debt}}</td>
+                        <td class="credito">{{this.credit}}</td>
+                        <td class="valor">{{this.valor}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="balancete-contabil">
+        <div class="balancete-title">
+            <h1>Balancete</h1>
+        </div>
+        <div class="balancete-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="counts-title">Contas</th>
+                        <th class="debito-balance-title">Crédito</th>
+                        <th class="credito-balance-title">Débito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each allAccounts}}
+                        <tr>
+                            <td class="counts">{{conta}}</td>
+                            {{#if (eq tipo 'débito')}}
+                                <td class="debito-balance">{{valores}}</td>
+                                <td class="credito-balance"></td>
+                            {{else}}
+                                <td class="debito-balance"></td>
+                                <td class="credito-balance">{{valores}}</td>
+                            {{/if}}
+                        </tr>
+                    {{/each}}
+                        <tr>
+                            <td class="total">SALDO</td>
+                            <td class="total-credit">{{totalCredit}}</td>
+                            <td class="total-debt">{{totalDebit}}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

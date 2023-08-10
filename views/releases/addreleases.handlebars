@@ -1,0 +1,32 @@
+<div class="releases-container">
+    <div class="releases-acording">
+        <h1>Lançamentos Contábeis</h1>
+        <form action="/releases/addreleases" method="post" class="addreleases">
+            <input type="hidden" name="CompanyId" value="{{id}}">
+            <div class="date-input">
+                <label for="date">Data</label>
+                <input type="date" name="date">
+            </div>
+            <div>
+                <label for="debt">Débito</label>
+                <input type="text" name="debt">
+            </div>
+            <div>
+                <label for="credit">Crédito</label>
+                <input type="text" name="credit">
+            </div>
+            <div>
+                <label for="valor">Valor</label>
+                <input type="number" name="valor">
+            </div>
+            <div>
+                <label for="description">Histórico</label>
+                <textarea name="description" cols="25" rows="5"></textarea>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+        <div class="btn-back releaseback">
+            <a href="/companies/company/{{id}}">Voltar</a>
+        </div>
+    </div>
+</div>

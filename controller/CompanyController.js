@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Company = require('../models/Company')
+const Releases = require('../models/Releases')
 
 module.exports = class CompanyController {
     static async allCompanies(req, res) {  
@@ -19,10 +20,9 @@ module.exports = class CompanyController {
         }
         // não sei pq mas a tabela msm sendo nomeada de company no banco de dados fica em plural
         const companies =  user.Companies.map((result) => result.dataValues)
-
+        
+        
         console.log(companies)
-
-
         res.render('companies/all', { companies })
     }
     static async dashboard(req, res) {
@@ -41,16 +41,72 @@ module.exports = class CompanyController {
 
         try {
             await Company.create(company)
-            console.log(company)
             req.flash('message', 'Empresa adicionada com sucesso')
         
             req.session.save(() => {
-                res.redirect('/')
+                res.redirect('/companies/all')
             })
         } catch (err) {
             console.log('aconteceu um erro', err)
         }
     } 
+
+    static async companyEdit(req, res) {
+        const id = req.params.id
+
+        const company = await Company.findOne({where: {id: id}, raw: true})
+        
+        console.log(company)
+        res.render('companies/edit', { company } )
+    }
+
+    static async companyEditPost(req, res) {
+        const id = req.body.id
+
+        const company = {
+            title: req.body.title
+        }
+
+        try {
+            Company.update(company, {where: {id: id}})
+            req.flash('message', 'Nome da empresa atualizado com sucesso!')
+            req.session.save(() => {
+                res.redirect('/companies/all')
+            })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    static async companyRemove(req, res) {
+        const id = req.params.id
+
+        const company = await Company.findOne({where: {id: id}, raw: true})
+
+        console.log(id, company)
+
+        res.render('companies/remove', {company})
+        
+    }
+
+    static async companyRemovePost(req, res) {
+        const id = req.body.id
+
+        Company.destroy({where: {id: id}})
+        req.flash('message', 'Empresa removida com Sucesso')
+
+        req.session.save(() => {
+            res.redirect('/companies/all')
+        })
+    }
+
+    static async company(req, res) {
+        const id = req.params.id
+        const company = await Company.findOne({where: {id: id}, raw: true})
+        res.render('companies/company', {company})
+    }
+
+    
 
     
 }

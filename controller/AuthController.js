@@ -2,6 +2,7 @@ const User = require('../models/User')
 
 const bcrypt = require('bcryptjs')
 
+
 module.exports = class AuthController {
     static async login(req, res) {
         res.render('auth/login')
@@ -20,11 +21,12 @@ module.exports = class AuthController {
             return
         }
 
-        const passwordMatch = bcrypt.compare(password, user.password)
+        const passwordMatch = await bcrypt.compare(password, user.password)
 
         if (!passwordMatch) {
             res.render('auth/login')
             req.flash('message', 'Senha inválida')
+            return
         }
 
         req.session.userid = user.id
@@ -32,7 +34,7 @@ module.exports = class AuthController {
         req.flash('message', 'Autenticação realizado com sucesso!')
 
         req.session.save(() => {
-            res.redirect('/')
+            res.redirect('/companies/dashboard')
         })
 
     }
@@ -81,7 +83,7 @@ module.exports = class AuthController {
             req.session.userid = createdUser.id
             req.flash('message', 'Cadastro realizado com sucesso')
             req.session.save(() => {
-                res.redirect('/')   
+                res.redirect('/companies/dashboard')   
             })
             
         } catch(err) {

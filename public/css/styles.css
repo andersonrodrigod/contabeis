@@ -222,8 +222,9 @@ body {
 
 .article-acording-1 {
     display: flex;
-    gap: 30px;
-    margin-left: 90px;
+    justify-content: center;
+    gap: 100px;
+    
 }
 
 .article-acording-1 article {
@@ -231,8 +232,8 @@ body {
     border-radius: 5px;
     background-color: rgb(248, 205, 242);
     margin-top: 50px;
-    width: 275px;
-    padding-bottom: 20px;
+    width: 400px;
+    padding-bottom: 40px;
 }
 
 .article-acording-1 article h2 {
@@ -266,7 +267,7 @@ body {
 
 .article-acording-2 article {
     border: 1px solid rgba(0, 0, 0, 0.239);
-    width: 300px;
+    width: 510px;
     padding-bottom: 20px;
 }
 
@@ -342,7 +343,7 @@ body {
 
 .relatório-financeiro-acroding article {
     border: 1px solid rgba(0, 0, 0, 0.296);
-    width: 300px;
+    width: 512px;
     padding-bottom: 20px;
 }
 
@@ -367,9 +368,10 @@ body {
     justify-content: center;
     background-color: white;
     border: 1px solid white;
-    margin-left: 350px;
-    margin-right: 350px;
-    padding-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding-bottom: 40px;
 }
 
 .dashboard h2 {
@@ -390,7 +392,7 @@ body {
     
 }
 
-.dashboard a {
+.btn-create a {
     text-decoration: none;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.331);
@@ -400,6 +402,24 @@ body {
     background-color: rgba(0, 0, 1, 0.682);
     font-family: 'Lato', sans-serif;
 }
+
+.btn-edit {
+    margin-top: 20px;
+    
+}
+
+.btn-edit a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 30px 10px 30px;
+    background-color: rgba(0, 0, 1, 0.682);
+    font-family: 'Lato', sans-serif;
+}
+
+
 
 .dashboard a:hover {
     background-color: rgba(9, 95, 217, 0.254);
@@ -479,10 +499,11 @@ body {
     display: flex;
     justify-content: center;
     background-color: white;
-    margin-left: 450px;
-    margin-right: 450px;
+    margin-left: 380px;
+    margin-right: 380px;
     font-family: 'Lato', sans-serif;
     padding-bottom: 50px;
+    margin-top: 50px;
 }
 
 
@@ -506,9 +527,337 @@ body {
     font-size: 1.4em;
     font-weight: 600;
     padding: 10px 0px 10px 0px;
-    border: 1px solid rgba(0, 0, 0, 0.476);
+    border: 1px solid rgba(0, 0, 0, 0.476); 
+}
+
+.companies-added ul li:hover {
+    background-color: rgba(9, 95, 217, 0.254);
+    color: black;
+    cursor: pointer;
+}
+
+.companies-added ul li a {
+    text-decoration: none;
+    color: black;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.company-container {
+   display: flex;
+   justify-content: center;
+   font-family: 'Lato', sans-serif;
+}
+
+.company-acording {
+    text-align: center;
+    background-color: white;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-bottom: 50px;
+}
+
+.company-title {
+    margin-top: 25px;
     
 }
+
+.company-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    
+    
+}
+
+.company-links div {
+    width: 245px;
+    background-color: rgba(0, 0, 1, 0.682);
+    padding: 10px 20px 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.company-acording .btn-back {
+    text-align: start;
+    margin-left: 25px;
+}
+
+.company-links div a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.company-links div:hover {
+    background-color: rgba(9, 95, 217, 0.254);
+    color: black;
+}
+
+.company-links div a:hover {
+    color: black;
+}
+
+.company-container {
+    margin-top: 80px;
+}
+
+.remove-company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: 80px;
+}
+
+.remove-acording {
+    text-align: center;
+    background-color: white;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-bottom: 30px;  
+}
+
+.remove-btn-back {
+    text-align: start;
+}
+
+.remove-title {
+    margin-top: 25px;
+}
+
+.remove-info {
+    margin-top: 10px;
+}
+
+.remove-acording form {
+    margin-top: 15px;
+}
+
+.releases-container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.releases-acording {
+    background-color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.releaseback {
+    text-align: start;
+}
+
+.releases-acording h1 {
+    margin-top: 20px;
+}
+
+.releases-acording h2 {
+    margin-top: 15px;
+}
+
+.addreleases {
+    margin-top: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.addreleases div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;   
+}
+
+.addreleases div input {
+   height: 30px; 
+   font-size: 1.1em;
+}
+
+.date-input {
+    width: 135px;
+}
+
+.date-input input {
+    font-size: 1.1em;
+}
+
+.addreleases div label {
+    text-align: start;
+}
+
+.all-releases-container {
+    display: flex;
+}
+
+.releases-info {
+    background-color: white;
+    width: 70vw;
+    margin-left: 80px;
+    padding-bottom: 50px;
+}
+
+.company-title h1 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.info-acording {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.info-acording table  {
+    font-family: 'Lato', sans-serif;    
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  
+.info-acording table thead tr th {
+    border: 1px solid black;
+    padding: 5px 0px 5px 0px;  
+    font-size: 1.1em;
+    color: red;
+}
+
+.info-acording table tbody tr td {
+    border: 1px solid black; 
+    padding: 5px 0px 5px 3px; 
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.date {
+    width: 80px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.history {
+    width: 820px;
+    font-size: 0.8em;
+}
+
+.debito {
+    width: 150px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.credito {
+    width: 150px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.valor {
+    width: 80px;
+    text-align: center;
+}
+
+.balancete-contabil {
+    background-color: white;
+    margin-left: 20px;
+    width: 20vw;
+}
+
+.balancete-title {
+    margin-top: 55px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.balancete-table {
+    margin-top: 10px;
+    margin-left: 18px;
+    
+}
+
+.balancete-table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.balancete-table table thead tr th {
+    border: 1px solid black;
+    font-family: 'Lato', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.balancete-table table tbody tr td {
+    border: 1px solid black;
+    font-family: 'Lato', sans-serif;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.counts {
+    padding-left: 5px;
+}
+
+.debito-balance {
+    text-align: center;
+}
+
+.credito-balance {
+    text-align: center;
+}
+
+.counts-title {
+    width: 150px;
+    color: red;
+}
+
+.debito-balance-title {
+    text-align: center;
+    width: 80px;
+    color: red;
+}
+
+.credito-balance-title {
+    text-align: center;
+    width: 80px;
+    color: red;
+}
+
+.total {
+    padding-left: 5px;
+    color: BLUE;
+    font-weight: bolder;
+}
+
+.total-credit {
+    text-align: center;
+    color: blue;
+}
+
+.total-debt {
+    text-align: center;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+    
+
 
 
 
@@ -541,37 +890,16 @@ body {
 
 
 footer {
-    margin-top: 100px;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    background-color: black;
-}
-
-.footer-acording {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
     margin-top: 50px;
-    
-}
-
-.footer-acording section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-acording section a {
-    text-decoration: none;
     color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
+    
+    font-size: 2em;
+   
 }
+
 
 .rodape {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
