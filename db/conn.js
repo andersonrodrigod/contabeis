@@ -1,9 +1,13 @@
 const { Sequelize } = require('sequelize')
 
-const sequelize = new Sequelize('contabeis', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
+
+const sequelize = new Sequelize('contabeis', 'root', 'rs721500', {
+  host: 'localhost',
+  dialect: 'mysql'
 })
+
+
+
 
 try {
     sequelize.authenticate()
