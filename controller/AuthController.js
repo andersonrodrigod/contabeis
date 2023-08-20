@@ -14,18 +14,16 @@ module.exports = class AuthController {
         const user = await User.findOne({where: {username: username}})
 
         if (!user) {
-            res.render('auth/login')
             req.flash('message', 'Usuário não encontrado')
-            
-
+            res.render('auth/login')
             return
         }
 
         const passwordMatch = await bcrypt.compare(password, user.password)
 
         if (!passwordMatch) {
-            res.render('auth/login')
             req.flash('message', 'Senha inválida')
+            res.render('auth/login')
             return
         }
 
@@ -85,7 +83,7 @@ module.exports = class AuthController {
             req.session.save(() => {
                 res.redirect('/companies/dashboard')   
             })
-            
+            return 
         } catch(err) {
             console.log(err)
         }
