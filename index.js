@@ -5,7 +5,7 @@ const FileStore = require('session-file-store')(session)
 const flash = require('express-flash')
 const handlebarsHelpers = require('handlebars-helpers')()
 const handlebars = require('handlebars')
-require('dotenv').config()
+
 
 Object.keys(handlebarsHelpers).forEach(helperName => {
     handlebars.registerHelper(helperName, handlebarsHelpers[helperName]);
