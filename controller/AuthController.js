@@ -15,16 +15,14 @@ module.exports = class AuthController {
 
         if (!user) {
             req.flash('message', 'Usuário não encontrado')
-            res.render('auth/login')
-            return
+            return res.render('auth/login')
         }
 
         const passwordMatch = await bcrypt.compare(password, user.password)
 
         if (!passwordMatch) {
             req.flash('message', 'Senha inválida')
-            res.render('auth/login')
-            return
+            return res.render('auth/login')
         }
 
         req.session.userid = user.id
@@ -46,24 +44,21 @@ module.exports = class AuthController {
 
         if (password != confirmpassword) {
             req.flash('message', 'As senhas não conferem')
-            res.render('auth/register')
-            return
+            return res.render('auth/register')
         }
 
         const checkEmailExists = await User.findOne({where: {email: email}})
 
         if (checkEmailExists){
             req.flash('message', 'O e-mail ja está em uso')
-            res.render('auth/register')
-            return
+            return res.render('auth/register')
         }
 
         const checkUserExists = await User.findOne({where: {username: username}})
 
         if (checkUserExists) {
             req.flash('message', 'O usuário já esta em uso')
-            res.render('auth/register')
-            return  
+            return res.render('auth/register')
         }
 
         const salt = bcrypt.genSaltSync(10)
