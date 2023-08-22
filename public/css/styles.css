@@ -368,9 +368,10 @@ body {
     background-color: white;
     border: 1px solid white;
     margin-top: 25px;
-    margin-left: 700px;
-    margin-right: 700px;
+    margin-left: 500px;
+    margin-right: 500px;
     padding-bottom: 40px;
+    
 }
 
 .dashboard h2 {
@@ -891,18 +892,55 @@ footer {
     .counts-title {
         width: 120px;
     }
+
+    .dashboard {
+        margin-left: 500px;
+        margin-right: 500px;
+    }
 }
 
 @media screen and (max-width: 1500px) {
     .article-acording-1 {
         margin-right: 25px;
     }
+
+    .dashboard {
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+    .company-acording {
+        margin-left: 400px;
+        margin-right: 400px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .dashboard {
+        margin-left: 350px;
+        margin-right: 350px;
+    }
+
+    .company-acording {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .companies-container {
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .dashboard {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .all-releases-container {   
         flex-direction: column;
-        
     }
 
     .releases-info {
@@ -921,6 +959,15 @@ footer {
         justify-content: center;
     }
 
+    .dashboard {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .companies-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 
 }
 
