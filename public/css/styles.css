@@ -362,28 +362,29 @@ body {
     line-height: 1.5em;
 }
 
-.dashboard {
+.container-dashboard {
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dashboard {
+    width: 400px;
+    height: 200px;
     background-color: white;
-    border: 1px solid white;
-    margin-top: 25px;
-    margin-left: 500px;
-    margin-right: 500px;
-    padding-bottom: 40px;
-    
 }
 
 .dashboard h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 45px;
     font-family: 'Lato', sans-serif;
 }
 
 .btns-painel {
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+    justify-content: center;
+    margin-top: 15px;
     gap: 15px;
 }
 
@@ -426,14 +427,27 @@ body {
     color: black;
 }
 
+.empresas-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.empresas-containner-edit {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .empresa-form-container {
     background-color: white;
-    margin-left: 350px;
-    margin-right: 350px;
-    display: flex;
+    width: 700px;
+    height: 300px;
+    margin-top: 70px;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
-    padding-bottom: 50px;
 }
 
 
@@ -487,7 +501,7 @@ body {
 }
 
 .btn-adicionar {
-    width: 280px;
+    width: 200px;
     height: 30px;
     margin-top: 3px;
     font-family: 'Lato', sans-serif;
@@ -498,14 +512,16 @@ body {
 .companies-container {
     display: flex;
     justify-content: center;
-    background-color: white;
-    margin-left: 380px;
-    margin-right: 380px;
-    font-family: 'Lato', sans-serif;
-    padding-bottom: 50px;
-    margin-top: 50px;
+    height: 100vh;
+    width: 100vw;
 }
 
+.companies-added {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    width: 500px;
+    height: 300px;
+}
 
 .companies-added h2 {
     text-align: center;
@@ -516,9 +532,9 @@ body {
 .companies-added ul {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
-    border: 1px solid rgba(0, 0, 0, 0.361);
+    
 }
 
 .companies-added ul li {
@@ -526,8 +542,11 @@ body {
     list-style: none;
     font-size: 1.4em;
     font-weight: 600;
-    padding: 10px 0px 10px 0px;
+    width: 300px;
+    height: 35px;
+    margin-top: 5px;
     border: 1px solid rgba(0, 0, 0, 0.476); 
+    padding-top: 10px;
 }
 
 .companies-added ul li:hover {
@@ -539,29 +558,26 @@ body {
 .companies-added ul li a {
     text-decoration: none;
     color: black;
-    padding-left: 110px;
-    padding-right: 110px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
 }
 
 .company-container {
    display: flex;
    justify-content: center;
+   width: 100vw;
+   height: 100vh;
    font-family: 'Lato', sans-serif;
 }
 
 .company-acording {
     text-align: center;
     background-color: white;
-    margin-left: 550px;
-    margin-right: 550px;
-    padding-bottom: 50px;
+    width: 500px;
+    height: 450px;
 }
 
 .company-title {
-    margin-top: 25px;
-    
+    margin-top: 25px;  
 }
 
 .company-links {
@@ -612,7 +628,8 @@ body {
 .remove-company {
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 100vw;
+    height: 100vh;
     font-family: 'Lato', sans-serif;
     margin-top: 80px;
 }
@@ -620,9 +637,8 @@ body {
 .remove-acording {
     text-align: center;
     background-color: white;
-    margin-left: 550px;
-    margin-right: 550px;
-    padding-bottom: 30px;  
+    width: 600px;
+    height: 250px; 
 }
 
 .remove-btn-back {
@@ -698,13 +714,14 @@ body {
 
 .all-releases-container {
     display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 
 .releases-info {
     background-color: white;
-    width: 70vw;
-    margin-left: 80px;
-    padding-bottom: 50px;
+    width: 70vw; 
+    padding-bottom: 50px; 
 }
 
 .company-title h1 {
@@ -868,106 +885,7 @@ footer {
 
 
 @media screen and (max-width: 1650px) {
-    .article-acording-1 {
-        margin-left: 0px;
-    }
-
-    .article-acording-1 article {
-        margin-left: 30px;
-    }
-
-    .info-acording table {
-        margin-right: 15px;
-    }
-
-    .history {
-        width: 580px;
-    } 
-
-    .balancete-table {
-        margin-right: 10px;
-    }
-
-
-    .counts-title {
-        width: 120px;
-    }
-
-    .dashboard {
-        margin-left: 500px;
-        margin-right: 500px;
-    }
+    
 }
 
-@media screen and (max-width: 1500px) {
-    .article-acording-1 {
-        margin-right: 25px;
-    }
-
-    .dashboard {
-        margin-left: 400px;
-        margin-right: 400px;
-    }
-    .company-acording {
-        margin-left: 400px;
-        margin-right: 400px;
-    }
-}
-
-@media screen and (max-width: 1250px) {
-    .dashboard {
-        margin-left: 350px;
-        margin-right: 350px;
-    }
-
-    .company-acording {
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-
-    .companies-container {
-        margin-left: 180px;
-        margin-right: 180px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .dashboard {
-        margin-left: 250px;
-        margin-right: 250px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .all-releases-container {   
-        flex-direction: column;
-    }
-
-    .releases-info {
-        width: 80vw;
-    }
-
-    .balancete-contabil {
-        width: 80vw;
-        margin-top: 20px;
-        margin-left: 80px;
-        padding-bottom: 50px;
-    }
-
-    .balancete-table {
-        display: flex;
-        justify-content: center;
-    }
-
-    .dashboard {
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
-    .companies-container {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-}
 
