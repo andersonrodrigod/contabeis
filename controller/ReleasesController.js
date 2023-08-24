@@ -77,8 +77,6 @@ module.exports = class ReleasesController {
         const totalCredit = valoresCredit.reduce((acc, valor) => acc + valor.valores, 0);
         const totalDebit = valoresDebit.reduce((acc, valor) => acc + valor.valores, 0);
 
-        console.log(id)
-
         res.render('releases/allreleases', { id, releases, companyName, allAccounts, totalCredit, totalDebit })
     }
 

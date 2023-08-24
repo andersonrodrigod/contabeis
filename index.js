@@ -85,6 +85,6 @@ conn
     //.sync({force: true})// >>> sempre que for usar esse comando prestar atenção pois pode apagar todos os dados geralmente é usado pra for
     .sync()
     .then(() => {
-        app.listen(3000)    
+        app.listen(80)    
     })
     .catch((err) => console.log(err))
