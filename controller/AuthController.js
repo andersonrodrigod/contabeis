@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs')
 module.exports = class AuthController {
     static async login(req, res) {
         res.render('auth/login')
+        
     }
 
     static async loginPost(req, res) {
@@ -30,6 +31,7 @@ module.exports = class AuthController {
         req.flash('message', 'Autenticação realizado com sucesso!')
 
         req.session.save(() => {
+            
             res.redirect('/companies/dashboard')
         })
 
@@ -86,6 +88,7 @@ module.exports = class AuthController {
     
     static async logout(req, res) {
         req.session.destroy()
+        res.redirect('/login')
     }
 } 
 

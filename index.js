@@ -56,8 +56,8 @@ app.use(
         }),
         cookie: {
             secure: false,
-            httpOnly: true
-        }
+            httpOnly: true,
+        },
     })
 )
 

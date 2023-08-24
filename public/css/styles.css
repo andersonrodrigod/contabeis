@@ -201,15 +201,13 @@ body {
 
 .registro-de-empresas {
     display: flex;
-    flex-direction: column;
     margin-top: 90px;
-    margin-right: 100px;
     background-color: white;
 }
 
 .home-title-section {
     margin-top: 20px;
-    margin-left: 90px;
+    text-align: center;
 }
 
 .home-title-section h1 {
@@ -221,18 +219,19 @@ body {
 .article-acording-1 {
     display: flex;
     justify-content: center;
-    margin-left: -80px;
-    
+    margin-left: 90px;
+    margin-right: 90px;
+    gap: 20px;
 }
 
 .article-acording-1 article {
     border: 1px solid rgb(249, 83, 249);
     border-radius: 5px;
     background-color: rgb(248, 205, 242);
+    width: 350px;
     margin-top: 50px;
-    width: 400px;
     padding-bottom: 40px;
-    margin-left: 100px;
+    
 }
 
 .article-acording-1 article h2 {
@@ -546,7 +545,7 @@ body {
     height: 35px;
     margin-top: 5px;
     border: 1px solid rgba(0, 0, 0, 0.476); 
-    padding-top: 10px;
+    
 }
 
 .companies-added ul li:hover {
@@ -555,10 +554,16 @@ body {
     cursor: pointer;
 }
 
+.name-company {
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .companies-added ul li a {
     text-decoration: none;
-    color: black;
-
+    color: black; 
+    
 }
 
 .company-container {

@@ -5,7 +5,7 @@ const CompanyController = require('../controller/CompanyController')
 const checkAuth = require('../helpers/auth').checkAuth
 
 router.get('/dashboard', checkAuth, CompanyController.dashboard)
-router.get('/all', CompanyController.allCompanies)
+router.get('/all',checkAuth, CompanyController.allCompanies)
 router.get('/add', checkAuth, CompanyController.createCompany)
 router.post('/add', checkAuth, CompanyController.createCompanySave)
 router.get('/company/:id', checkAuth, CompanyController.company)

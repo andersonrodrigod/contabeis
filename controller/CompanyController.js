@@ -4,26 +4,34 @@ const Releases = require('../models/Releases')
 
 module.exports = class CompanyController {
     static async allCompanies(req, res) {  
-        const userId = req.session.userid
-        
-        const user = await User.findOne({
-            where: {
-                id: userId,
+        try {
+            const userId = req.session.userid
 
-            },
-            include: Company,
-            plain: true,
-        })
-
-        if (!user) {
-            res.redirect('/login')
+            if (!userId) {
+                return res.redirect('/login'); 
+            } else {
+                
+            }
+            const user = await User.findOne({
+                where: {
+                    id: userId,
+    
+                },
+                include: Company,
+                plain: true,
+            })
+    
+            if (!user) {
+                res.redirect('/login')
+            }
+            // não sei pq mas a tabela msm sendo nomeada de company no banco de dados fica em plural
+            const companies =  user.Companies.map((result) => result.dataValues)
+            
+            console.log(companies)
+            res.render('companies/all', { companies }) 
+        } catch (err) {
+            console.log(err)
         }
-        // não sei pq mas a tabela msm sendo nomeada de company no banco de dados fica em plural
-        const companies =  user.Companies.map((result) => result.dataValues)
-        
-        
-        console.log(companies)
-        res.render('companies/all', { companies })
     }
     static async dashboard(req, res) {
         res.render('companies/dashboard')
