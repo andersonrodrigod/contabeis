@@ -726,7 +726,7 @@ body {
 .releases-info {
     background-color: white;
     width: 70vw; 
-    padding-bottom: 50px; 
+    padding-bottom: 150px; 
 }
 
 .company-title h1 {
@@ -769,6 +769,7 @@ body {
 .history {
     width: 820px;
     font-size: 0.8em;
+    height: 35px;
 }
 
 .debito {
